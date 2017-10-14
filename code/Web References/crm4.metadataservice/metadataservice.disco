@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<discovery xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns="http://schemas.xmlsoap.org/disco/">
+  <contractRef ref="http://crm.remote:5555/mscrmservices/2007/metadataservice.asmx?wsdl" docRef="http://crm.remote:5555/mscrmservices/2007/metadataservice.asmx" xmlns="http://schemas.xmlsoap.org/disco/scl/" />
+  <soap address="http://crm.remote:5555/mscrmservices/2007/metadataservice.asmx" xmlns:q1="http://schemas.microsoft.com/crm/2007/WebServices" binding="q1:MetadataServiceSoap" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+  <soap address="http://crm.remote:5555/mscrmservices/2007/metadataservice.asmx" xmlns:q2="http://schemas.microsoft.com/crm/2007/WebServices" binding="q2:MetadataServiceSoap12" xmlns="http://schemas.xmlsoap.org/disco/soap/" />
+</discovery>

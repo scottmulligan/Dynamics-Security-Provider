@@ -1,0 +1,162 @@
+<project>
+  <Metadata>
+    <metadata>
+      <PackageName>Microsoft Dynamics CRM Security Provider</PackageName>
+      <Author>Sitecore Corporation</Author>
+      <Version>2.2.0</Version>
+      <Revision />
+      <License>&lt;p style="text-align: center;"&gt;&lt;strong&gt;Sitecore License Agreement&lt;/strong&gt;&lt;/p&gt;
+&lt;div style="text-align:justify"&gt;
+&lt;p&gt;&lt;strong&gt;LICENSEE&amp;rsquo;S USE OF THE SITECORE SOFTWARE IS SUBJECT TO LICENSEE&amp;rsquo;S FULL ACCEPTANCE OF THE TERMS, CONDITIONS, DISCLAIMERS AND LICENSE RESTRICTIONS SET FORTH IN THIS AGREEMENT. &lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1. &lt;span style="text-decoration: underline;"&gt;License Grant&lt;/span&gt;&lt;/strong&gt;: Upon payment in full of the license fee, Licensor grants Licensee a non-exclusive, perpetual, non-transferable, non-assignable, non-sublicensable license, without time limitations, to use the Sitecore Software in supported configurations as described in the Documentation, in compliance with all applicable laws, in object code form only, exclusively for the Permitted Usage (as that term is defined in Exhibit A), subject to the terms and conditions set forth in this Agreement and Exhibits A and B hereto, which are incorporated herein and made a part of this Agreement. Except as expressly authorized by this Agreement, &amp;ldquo;Licensee&amp;rdquo; as used herein does not include any other entity or person, including any present or future subsidiary or affiliate of Licensee, or any entity or person owning any interest in Licensee at present or in the future. &amp;ldquo;Sitecore Software&amp;rdquo; means the software that is licensed by Licensor in this Agreement, and any future Upgrades and Patches, as those terms are defined in Section 6 of this Agreement, that the Licensee may receive in accordance with the terms of the Agreement. &amp;ldquo;Documentation&amp;rdquo; means the resources made available in the reference section of the Sitecore Developer Network setting forth the then-current functional, operational, and performance capabilities of the Sitecore Software (http://sdn.sitecore.net/documentation).&lt;/p&gt;
+&lt;div style="margin-left:.3in;"&gt;&lt;p&gt;&lt;strong&gt;1.1 License Key&lt;/strong&gt;: Licensee will be provided a License Key that gives Licensee access to the Sitecore Software. The Sitecore Software may be used only on the equipment with the features and limitations specified in the License Key. The License Key shall be time-limited until full payment of the license fee has been received by Licensor. The License Key may limit the number of installations of the Sitecore Software and the capacity of the Servers on which the Sitecore Software may be installed. For purposes of this Agreement, one Server is defined as a physical or virtual Server with a processing power for the web process equivalent to at most eight CPU cores. For example, one physical Server may contain eight single-core CPUs, four dual-core CPUs, two quad-core CPUs or one eight-core CPU. A Server with three or four quad-core CPUs would therefore count as two Servers. A virtual server&amp;rsquo;s processing power will be counted as the number of physical cores allocated or processor core equivalents allocated to the virtual server.&amp;nbsp; For example, one virtual server with two physical processor cores allocated, or with the equivalent of two simulated processor cores allocated, would be counted as the equivalent of two CPU cores and therefore one Server.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.2 Intellectual Property Rights&lt;/strong&gt;: The Sitecore Software includes the following patents: U.S. Patent Nos. 7,856,345 and 8,255,526. Ownership of the Sitecore Software, and all worldwide rights, title and interest in and to the Intellectual Property associated with the Sitecore Software shall remain solely and exclusively with Licensor or with third parties that license modules included with the Sitecore Software. Licensee shall retain intact all applicable Licensor copyright, patent and/or trademark notices on and in all copies of the Sitecore Software. All rights, title, and interest in Sitecore Software not expressly granted to Licensee in this Agreement are reserved by Licensor. &amp;ldquo;Intellectual Property&amp;rdquo; as used in this Agreement means any and all patents, copyrights, trademarks, service marks and trade names (registered and unregistered), trade secrets, know-how, inventions, licenses and all other proprietary rights throughout the world related to the authorship, origin, design, utility, process, manufacture, programming, functionality and operation of Sitecore Software and its Derivative Works.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.3 Confidential Information&lt;/strong&gt;: &lt;strong&gt;&amp;nbsp;&lt;/strong&gt;The term &amp;ldquo;Confidential Information&amp;rdquo; shall include any information, whether tangible or intangible, including, but not limited to, techniques, discoveries, inventions, ideas, processes, software (in source or object code form), designs, technology, technical specifications, flow charts, procedures, formulas, concepts, any financial data, and all business and marketing plans and information, in each case which is maintained in confidence by the disclosing party (&amp;ldquo;Disclosing Party&amp;rdquo;) and disclosed to the other party (&amp;ldquo;Recipient&amp;rdquo;) hereunder. The failure by the Disclosing Party to designate any tangible or intangible information as Confidential Information shall not give Recipient the right to treat such information as free from the restrictions imposed by this Agreement if the circumstances would lead a reasonable person to believe that such information is Confidential Information. Confidential Information does not include information which Recipient documents (a) is now, or hereafter becomes, through no act or failure to act on the part of Recipient, generally known or available to the public; (b) was rightfully in Recipient&amp;rsquo;s possession prior to disclosure by the Disclosing Party; (c) becomes rightfully known to Recipient, without restriction, from a source other than the Disclosing Party and without any breach of duty to the Disclosing Party;&amp;nbsp; (d) is developed independently by Recipient without use of or reference to any of the Confidential Information and without violation of any confidentiality restriction contained herein; or (e) is approved by the Disclosing Party for disclosure without restriction, in a written document executed by a duly authorized officer of the Disclosing Party. Recipient shall hold the Confidential Information received from the Disclosing Party in strict confidence and shall not, directly or indirectly, disclose it, except as expressly permitted herein. Recipient shall promptly notify the Disclosing Party upon learning of any misappropriation or misuse of Confidential Information disclosed hereunder. Notwithstanding the foregoing, Recipient shall be permitted to disclose Confidential Information pursuant to a judicial or governmental order, provided that Recipient provides the Disclosing Party reasonable prior notice, and assistance, to contest such order.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.4 Restrictions on Use&lt;/strong&gt;: Except as expressly authorized by applicable law or by Licensor in writing, Licensee shall not copy, in whole or in part, the Sitecore Software or Documentation, or modify, disassemble, decompress, reverse compile, reverse assemble, reverse engineer, or translate any portion of the Sitecore Software. Licensee shall not rent, lease, lend, distribute, sell, assign, license, or otherwise transfer the Sitecore Software, or create Derivative Works of the Sitecore Software. Additionally, Licensee may use embedded third-party components in the Sitecore Software exclusively as described in the OEM section of the Sitecore Developer Network (&lt;a href="http://sdn.sitecore.net/oem"&gt;http://sdn.sitecore.net/oem&lt;/a&gt;).&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.5 &amp;nbsp;Derivative Works&lt;/strong&gt;: &amp;ldquo;Derivative Works&amp;rdquo; as used herein means any software program (whether in source code or object code), and all copies thereof, developed by or on behalf of Licensee based on or derived from any part of the Sitecore Software, including without limitation any revision, modification, enhancement, translation (including compilation or recapitulation by computer), abridgment, condensation, expansion, or any other form in which the Sitecore Software may be recast, transformed or adapted, and that, if prepared without Licensor's authorization, would constitute a patent, copyright or trade secret infringement of the Sitecore Software, or would otherwise constitute an unauthorized use of Licensor&amp;rsquo;s Confidential Information. In the event any such Derivative Works are created, Licensor shall own all right, title, and interest in and to such Derivative Works. If, under the operation of local law or otherwise, Licensee or such third party comes to have any rights associated with such Derivative Works, Licensee hereby and shall automatically assign all such rights to Licensor for no additional consideration. For avoidance of doubt, Licensor shall claim no intellectual property interest or legal interest of any kind in any code created by Licensee to facilitate its authorized use of the Sitecore Software so long as the creation of such code does not constitute a Derivative Work or violate any other provision of this Agreement.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.6 Third Party Use and Rights&lt;/strong&gt;: Licensee may authorize third parties to assist Licensee in the management, editing, and hosting of web-based content created by use of the Sitecore Software, provided that: (1) such activities are within the scope of the activities Licensee is itself authorized to perform under this Agreement; (2) such third party&amp;rsquo;s acts are primarily for the direct or indirect benefit of Licensee; and (3) such third parties are not charged a fee by Licensee for such activities. Licensee is prohibited from using the Sitecore Software as an Application Software Provider or in any time-sharing or other commercial arrangement of any kind that makes the Sitecore Software available to third parties primarily for the third party&amp;rsquo;s own uses. Except as expressly stated in this Agreement, no third party has any rights under this Agreement. Licensee is fully liable to the extent allowed by law for any unauthorized use of the Sitecore Software by third parties caused by any acts or omissions of Licensee.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;1.7 License Verification&lt;/strong&gt;: The Sitecore Software periodically transmits the following information to a server maintained by Licensor: License Key ID, licensee name, hostname (Licensee&amp;rsquo;s website URL), host IP, Sitecore Software version, and directory installation path. This information is used by Licensor to send periodic communications to Licensee relevant to use of the Sitecore Software, and to verify, at Licensor&amp;rsquo;s election, that the Sitecore Software is installed in accordance with the terms of this Agreement.&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2. &lt;span style="text-decoration: underline;"&gt;Limited Warranties&lt;/span&gt;&lt;/strong&gt;:&lt;/p&gt;
+&lt;div style="margin-left:.3in;"&gt;&lt;p&gt;&lt;strong&gt;2.1 Licensor&amp;rsquo;s Limited Warranty&lt;/strong&gt;: Licensor expressly warrants that the Sitecore Software provided to Licensee will work for a period of ninety (90) days following the effective date of this Agreement according to the Documentation. In the event any such Sitecore Software does not operate according to the Documentation during this Limited Warranty Period, Licensor shall repair or replace the Sitecore Software and such repair or replacement shall be Licensee&amp;rsquo;s sole and exclusive remedy.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;2.2 Virus/Malicious Code Warranty&lt;/strong&gt;: Licensor and Licensee warrant that they will use commercially reasonable virus and malicious code detection software programs to test any electronic files, including electronic communications, prior to any delivery or upon receiving such communications and that the parties will continue to take such steps with respect to exchanging electronic files and communications pursuant to this Agreement. In the event either party detects any computer virus or malicious code it shall immediately notify the other party and where possible shall promptly provide revised replacement files in the event any such computer virus or malicious code is detected.&lt;/p&gt;&lt;/div&gt;
+&lt;p&gt;&lt;strong&gt;3. &lt;span style="text-decoration: underline;"&gt;DISCLAIMER OF WARRANTIES&lt;/span&gt;: EXCEPT AS EXPRESSLY SET FORTH IN SECTION 2 ABOVE, THE SITECORE SOFTWARE AND THE DOCUMENTATION ARE SUPPLIED TO LICENSEE "AS IS.&amp;rdquo; LICENSOR (DEFINED IN THIS SECTION AS LICENSOR&amp;rsquo;S PARENT, AFFILIATES, SUBSIDIARIES, DISTRIBUTORS AND THEIR RESPECTIVE OFFICERS, DIRECTORS AND EMPLOYEES) MAKES NO WARRANTY, EXPRESS OR IMPLIED, AS TO THE SITECORE SOFTWARE, THE DOCUMENTATION, THE OPERATION OF THE SITECORE SOFTWARE, OR ANY OTHER GOODS OR SERVICES RENDERED BY LICENSOR TO LICENSEE, INCLUDING BUT NOT LIMITED TO, ANY IMPLIED WARRANTIES OF MERCHANTABILITY, PERFORMANCE, ACCURACY, NON-INFRINGEMENT, FITNESS FOR A PARTICULAR PURPOSE AND ALL WARRANTIES ARISING FROM COURSE OF DEALING OR USAGE OF TRADE, EXCEPT TO THE EXTENT ANY WARRANTIES IMPLIED BY LAW CANNOT BE WAIVED. LICENSOR EXPRESSLY DISCLAIMS ANY AND ALL EXPRESS, IMPLIED OR STATUTORY WARRANTIES THAT THE SITECORE SOFTWARE WILL RUN PROPERLY ON ANY HARDWARE, THAT THE SITECORE SOFTWARE WILL MEET LICENSEE&amp;rsquo;S REQUIREMENTS OR OPERATE IN THE COMBINATIONS WHICH MAY BE SELECTED FOR USE BY LICENSEE, OR THAT THE OPERATION OF THE SITECORE SOFTWARE WILL BE UNINTERRUPTED OR ERROR FREE, OR THAT ALL ERRORS WILL BE CORRECTED. LICENSOR MAKES NO EXPRESS OR IMPLIED WARRANTY OF ANY KIND REGARDING ANY SEPARATELY LICENSED SOFTWARE THAT MAY BE USED WITH THE SITECORE SOFTWARE.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;4. &lt;span style="text-decoration: underline;"&gt;LIMITATION OF LIABILITY&lt;/span&gt;: LICENSOR (DEFINED IN THIS SECTION AS LICENSOR&amp;rsquo;S PARENT, AFFILIATES, SUBSIDIARIES, DISTRIBUTORS AND THEIR RESPECTIVE OFFICERS, DIRECTORS AND EMPLOYEES) SHALL NOT BE LIABLE TO LICENSEE OR ANY THIRD PARTY FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, PUNITIVE, OR EXEMPLARY DAMAGES ARISING OUT OF OR RELATED TO THIS AGREEMENT UNDER ANY LEGAL THEORY, INCLUDING BUT NOT LIMITED TO, LOST PROFITS, LOST DATA OR BUSINESS INTERRUPTION, THE COST OF RECOVERING ANY DATA, INFRINGEMENT, OR THE COST OF SUBSTITUTE SOFTWARE, EVEN IF LICENSOR HAS BEEN ADVISED OF, KNOWS OF, OR SHOULD HAVE KNOWN, OF THE POSSIBILITY OF SUCH DAMAGES. LICENSOR&amp;rsquo;S AGGREGATE LIABILITY UNDER THIS AGREEMENT SHALL NOT EXCEED THE AMOUNT OF FEES (NOT INCLUDING MAINTENANCE PROGRAM CHARGES) PAID BY LICENSEE FOR USE OF THE SITECORE SOFTWARE UNDER THIS AGREEMENT. LICENSOR WILL NOT BE LIABLE FOR DELAYS OR FAILURES IN PERFORMANCE OF THE SUPPORT OR ANY OTHER SERVICES CAUSED BY FORCES BEYOND ITS CONTROL OR ANY FORCE MAJEURE EVENT SUCH AS ACT OF TERRORISM, LOSS OF POWER, ACT OF GOD, OR SIMILAR OCCURRENCE. THE LIMITATION PROVISIONS OF THIS SECTION SHALL BE APPLICABLE TO ANY CLAIM FILED BY LICENSEE ARISING OUT OF OR RELATING TO ANY SEPARATELY LICENSED SOFTWARE THAT MAY BE USED WITH THE SITECORE SOFTWARE.&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;5. &lt;span style="text-decoration: underline;"&gt;Sitecore Maintenance Program&lt;/span&gt;&lt;/strong&gt;: Licensee will automatically be enrolled in the Sitecore Maintenance Program. For each Maintenance Program Period (as that term is defined in Exhibit A) Licensee will be charged a non-refundable Maintenance Program Charge (as that term is defined in Exhibit A). The Sitecore Maintenance Program includes Upgrades and support.&amp;nbsp;Upgrades are free of charge for as long as Licensee is enrolled in the Maintenance Program. Three years after the date of the initial purchase and each three-year anniversary thereafter, Licensor may adjust the Maintenance Program Charge then in effect for all software purchased under this Agreement to 20% of the Licensor&amp;rsquo;s then-current retail prices.&amp;nbsp;Licensee may cancel the Maintenance Program by providing Licensor with 60 days notice prior to the end of any Maintenance Program Period.&amp;nbsp;Licensor may cancel the Maintenance Program upon Licensee&amp;rsquo;s failure to pay timely any applicable Maintenance Program Charge. A cancelled Maintenance Program may not be renewed except upon payment of double the amount of fees that would have been paid during the lapsed period.&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;6. &lt;span style="text-decoration: underline;"&gt;Upgrades and Patches of Sitecore Software&lt;/span&gt;&lt;/strong&gt;: &amp;ldquo;Patch&amp;rdquo; as used in this Agreement means a specific, targeted fix to a discrete problem in the use or functionality of the Sitecore Software that Licensor in its sole discretion defines to constitute a &amp;ldquo;Patch&amp;rdquo; and may from time to time provide to Licensee. &amp;ldquo;Upgrade&amp;rdquo; as used in this Agreement means a new version of some or all of the Sitecore Software, or an improvement in the use or functionality of the Sitecore Software more substantial than a Patch, that Licensor in its sole discretion defines to constitute an &amp;ldquo;Upgrade&amp;rdquo; and may from time to time provide to Licensees enrolled in the Sitecore Maintenance program. Licensee expressly acknowledges that Upgrades and Patches may change functionality of the Sitecore Software and integration with other systems, and may not work with some or all of the Sitecore Software modules, or be backward compatible with earlier versions of Sitecore Software. Installation of Patches and Upgrades is the choice and responsibility of Licensee. To the extent that operation of the Sitecore Software is affected by problems in standard software, including, but not limited to, Microsoft Internet Explorer, Windows and the Microsoft.Net Framework, then Licensee shall install updates to such standard software per Licensor&amp;rsquo;s specifications in order to resolve these issues. Licensor has no control over such standard software, and cannot assure that problems with such standard software will be corrected, or that such corrections will be made in a timely manner.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;7. &amp;nbsp;&lt;span style="text-decoration: underline;"&gt;Waivers&lt;/span&gt;&lt;/strong&gt;: All waivers must be in writing and signed by authorized representatives of the parties. Any waiver or failure to enforce any provision of this Agreement on one occasion shall not be deemed a waiver of any other provision or of such provision on any other occasion.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;8. &amp;nbsp;&lt;span style="text-decoration: underline;"&gt;Severability&lt;/span&gt;&lt;/strong&gt;: If any provision of this Agreement is adjudicated to be unenforceable, such provision shall be deemed changed and interpreted to accomplish the objectives of such provision to the greatest extent possible under applicable law and the remaining provisions shall continue in full force and effect.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;9. &amp;nbsp;&lt;span style="text-decoration: underline;"&gt;Assignment&lt;/span&gt;&lt;/strong&gt;: Licensee may not assign this Agreement, by operation of law or otherwise, which includes any change of control in the ownership structure of Licensee. Licensor may assign this Agreement to a successor (whether by merger, a sale of all or a significant portion of its assets, a sale of a controlling interest of its capital stock, or otherwise) that agrees to assume Licensor&amp;rsquo;s obligations under this Agreement. Any attempted assignment or transfer in violation of this Section shall be void and of no force or effect. Subject to the provisions of this Section 9, this Agreement shall be binding upon the successors and assigns of the parties.&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;10. &lt;span style="text-decoration: underline;"&gt;Entire Agreement&lt;/span&gt;&lt;/strong&gt;: This Agreement, and any attachment that is expressly incorporated in this Agreement, constitutes the entire agreement between the parties regarding the subject matter hereof and supersedes all prior or contemporaneous agreements, understandings and communications, whether written or oral. This Agreement may be amended only by a written document signed by both parties. In the event of a conflict between any provision of this Agreement with any other attachment or document, this Agreement shall control. Any term or condition not specifically authorized by this Agreement included in any Licensee invoice, purchase order or other document rendered pursuant to this Agreement is of no force or effect unless the specific term or condition has been previously agreed to by the parties in writing in a separate agreement. No action by Licensor (including, without limitation, receipt of payment of any such invoice, or acceptance of any purchase order, in whole or in part) shall be construed as making any such term or condition binding on Licensor.&lt;/p&gt;
+&lt;div&gt;
+&lt;p&gt;&amp;nbsp;&lt;/p&gt;
+&lt;p&gt;Sitecore License Agreement. July 1, 2013&lt;/p&gt;</License>
+      <Comment />
+      <Attributes />
+      <Readme>This version of module requires Windows Identity Foundation and .NET Framework 4.5.2 and is able to work with CRM versions up to 2015
+
+The installation package contains the following elements:
+- /bin/CRMSecurityProvider.dll file;
+- /bin/Microsoft.Crm.Sdk.Proxy.dll file;
+- /bin/Microsoft.Practices.Unity.dll file;
+- /bin/Microsoft.Xrm.Sdk.dll file;
+- /sitecore/admin/CRMProviderProfiler.aspx performance profiler page;
+- /App_Config/Include/crm.config file;
+- /sitecore/system/Settings/Security/Profiles/CrmContact profile item;
+- /sitecore/templates/System/Security/CrmContact template;
+
+After installation add the following elements to the cofiguration files:
+1) to connectionStrings element of /App_Config/ConnectionStrings.config:
+
+- for CRM web services v3
+&lt;add name="CRMConnString" connectionString="CRM:url=[url_to_crm_webservice];user id=[user_name];password=[password];" /&gt;
+- for CRM web services v4 - v7
+&lt;add name="CRMConnString" connectionString="CRM:url=[url_to_crm_webservice];user id=[user_name];password=[password];organization=[crm_organization_name];authentication type=[authentication_type]" /&gt;
+
+2) to domains element of the /App_Config/Security/Domains.config.xml:
+
+&lt;domain name="crm" ensureAnonymousUser="false" defaultProfileItemID="{DDEDA46F-169B-4A70-8732-DBD3F407AF2E}"/&gt;
+
+3) web.config file:
+  - change the realProviderName attribute value of the sitecore provider element under the system.web&gt;membership&gt;providers to "switcher", it should look like this:
+    &lt;add name="sitecore" type="Sitecore.Security.SitecoreMembershipProvider, Sitecore.Kernel" realProviderName="switcher" providerWildcard="%" raiseEvents="true" /&gt;
+  - to system.web&gt;membership&gt;providers element
+    &lt;add name="crm" type="CRMSecurityProvider.CRMMembershipProvider, CRMSecurityProvider" connectionStringName="CRMConnString" applicationName="sitecore"/&gt;
+  - change the realProviderName attribute value of the sitecore provider element under the system.web&gt;membership&gt;roleManager to "switcher", it should look like this:
+    &lt;add name="sitecore" type="Sitecore.Security.SitecoreRoleProvider, Sitecore.Kernel" realProviderName="switcher" raiseEvents="true" /&gt; 
+  - to system.web&gt;roleManager&gt;providers element
+    &lt;add name="crm" type="CRMSecurityProvider.CRMRoleProvider, CRMSecurityProvider" connectionStringName="CRMConnString"/&gt;
+  - change the defaultProvider attribute value of the system.web&gt;profile element to "switcher", it should look like this:
+    &lt;profile defaultProvider="switcher" enabled="true" inherits="Sitecore.Security.UserProfile, Sitecore.Kernel"&gt;
+  - to system.web&gt;profile&gt;providers element
+    &lt;add name="crm" type="CRMSecurityProvider.CRMProfileProvider, CRMSecurityProvider" connectionStringName="CRMConnString"/&gt;
+  - to system.web&gt;profile&gt;properties element
+    &lt;add type="System.String" name="Country" customProviderData="crm|address1_country"/&gt;
+    &lt;add type="System.String" name="City" customProviderData="crm|address1_city"/&gt;
+    &lt;add type="System.String" name="BirthDate" customProviderData="crm|birthdate"/&gt;
+    &lt;add type="System.String" name="DoNotEmail" customProviderData="crm|donotemail"/&gt;
+  - to sitecore&gt;switchingProviders&gt;membership element (the order is not important)
+    &lt;provider providerName="crm" storeFullNames="false" wildcard="%" domains="crm" /&gt;
+  - to sitecore&gt;switchingProviders&gt;roleManager element (the order is not important)
+    &lt;provider providerName="crm" storeFullNames="false" wildcard="%" domains="crm" /&gt;
+  - to sitecore&gt;switchingProviders&gt;profile element (it must be before the sql definition in this group)
+    &lt;provider providerName="crm" storeFullNames="false" wildcard="%" domains="crm" /&gt;
+
+Please see the module documentation for details.
+
+After the configuration is complete, restart IIS.</Readme>
+      <Publisher>Sitecore Corporation</Publisher>
+      <PostStep />
+      <PackageID />
+    </metadata>
+  </Metadata>
+  <SaveProject>True</SaveProject>
+  <Sources>
+    <xitems>
+      <Entries>
+        <x-item>/core/sitecore/system/Settings/Security/Profiles/CrmContact/{DDEDA46F-169B-4A70-8732-DBD3F407AF2E}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Security/CrmContact/{983AE684-17F8-43FB-8BAF-76B9D5617CB0}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Security/CrmContact/Data/{E2C6277F-50C6-4CC2-BC2A-F688EAA795BD}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Security/CrmContact/Data/BirthDate/{79A499DC-F3FD-41D1-9469-FF788D71E348}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Security/CrmContact/Data/City/{911002CF-577D-4C63-8EEA-CDE2E2CB168F}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Security/CrmContact/Data/Country/{8A49107C-8C18-489C-8785-C88C06A5048F}/invariant/0</x-item>
+        <x-item>/core/sitecore/templates/System/Security/CrmContact/Data/DoNotEmail/{DEA1FDB0-B660-4F3E-8E9D-FEE36B70A754}/invariant/0</x-item>
+      </Entries>
+      <SkipVersions>False</SkipVersions>
+      <Converter>
+        <ItemToEntryConverter>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </ItemToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Profile item and its template</Name>
+    </xitems>
+    <xfiles>
+      <Entries>
+        <x-item>/App_Config/Include/crm.config</x-item>
+        <x-item>/bin/CRMSecurityProvider.dll</x-item>
+        <x-item>/bin/Microsoft.Crm.Sdk.Proxy.dll</x-item>
+        <x-item>/bin/Microsoft.Practices.Unity.dll</x-item>
+        <x-item>/bin/Microsoft.Xrm.Sdk.dll</x-item>
+        <x-item>/sitecore/admin/CRMProviderProfiler.aspx</x-item>
+        <x-item>/bin/Microsoft.IdentityModel.dll</x-item>
+      </Entries>
+      <Converter>
+        <FileToEntryConverter>
+          <Root>/</Root>
+          <Transforms>
+            <InstallerConfigurationTransform>
+              <Options>
+                <BehaviourOptions>
+                  <ItemMode>Undefined</ItemMode>
+                  <ItemMergeMode>Undefined</ItemMergeMode>
+                </BehaviourOptions>
+              </Options>
+            </InstallerConfigurationTransform>
+          </Transforms>
+        </FileToEntryConverter>
+      </Converter>
+      <Include />
+      <Exclude />
+      <Name>Module files</Name>
+    </xfiles>
+  </Sources>
+  <Converter>
+    <TrivialConverter>
+      <Transforms />
+    </TrivialConverter>
+  </Converter>
+  <Include />
+  <Exclude />
+  <Name />
+</project>

@@ -1,0 +1,11 @@
+<?xml version="1.0"?>
+<project name="CRM.Security.Provider" xmlns="http://schemas.sitecore.net/nant/buildscript">
+  <target name="resources.copy">
+    
+    <property name="cms.archive.fullpath" value="${bf::get-resource-archive('Sitecore', base.sitecore.version, base.sitecore.revision)}"/>
+    <echo message="Archive to be used ${cms.archive.fullpath}"/>
+
+    <smartextractor ZipFile="${cms.archive.fullpath}" IncludeRegex="[^/]*/website/bin/.*" ExcludeRegex="[^/]*/website/bin" OutputFolder="${path::get-full-path(webproject.path)}/bin" />
+	
+  </target>
+</project>

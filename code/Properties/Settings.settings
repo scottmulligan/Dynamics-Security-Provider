@@ -1,0 +1,21 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="CRMSecurityProvider.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="CRMSecurityProvider_crm3_webservice_CrmService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://crm:5555/mscrmservices/2006/crmservice.asmx</Value>
+    </Setting>
+    <Setting Name="CRMSecurityProvider_crm3_metadataservice_MetadataService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://crm:5555/mscrmservices/2006/metadataservice.asmx</Value>
+    </Setting>
+    <Setting Name="CRMSecurityProvider_crm4_webservice_CrmService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://crm.remote:5555/mscrmservices/2007/crmservice.asmx</Value>
+    </Setting>
+    <Setting Name="CRMSecurityProvider_crm4_metadataservice_MetadataService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://crm.remote:5555/mscrmservices/2007/metadataservice.asmx</Value>
+    </Setting>
+    <Setting Name="CRMSecurityProvider_crm4_discoveryservice_CrmDiscoveryService" Type="(Web Service URL)" Scope="Application">
+      <Value Profile="(Default)">http://crm.remote:5555/mscrmservices/2007/AD/crmdiscoveryservice.asmx</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

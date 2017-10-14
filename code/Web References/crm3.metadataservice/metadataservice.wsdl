@@ -1,0 +1,503 @@
+<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:tm="http://microsoft.com/wsdl/mime/textMatching/" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:mime="http://schemas.xmlsoap.org/wsdl/mime/" xmlns:tns="http://schemas.microsoft.com/crm/2006/WebServices" xmlns:s1="http://schemas.microsoft.com/crm/2006/Metadata" xmlns:s="http://www.w3.org/2001/XMLSchema" xmlns:s2="http://microsoft.com/wsdl/types/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:http="http://schemas.xmlsoap.org/wsdl/http/" targetNamespace="http://schemas.microsoft.com/crm/2006/WebServices" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/crm/2006/WebServices">
+      <s:import namespace="http://schemas.microsoft.com/crm/2006/Metadata" />
+      <s:element name="RetrieveMetadata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="1" maxOccurs="1" name="flags" type="tns:MetadataFlags" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="MetadataFlags">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="EntitiesOnly" />
+              <s:enumeration value="IncludeAttributes" />
+              <s:enumeration value="IncludeRelationships" />
+              <s:enumeration value="IncludePrivileges" />
+              <s:enumeration value="All" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+      <s:element name="RetrieveMetadataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveMetadataResult" type="s1:Metadata" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:complexType name="MoneyAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="MinValue" type="s:double" />
+              <s:element minOccurs="1" maxOccurs="1" name="MaxValue" type="s:double" />
+              <s:element minOccurs="1" maxOccurs="1" name="Precision" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="DecimalAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="MinValue" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="MaxValue" type="s:decimal" />
+              <s:element minOccurs="1" maxOccurs="1" name="Precision" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="FloatAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="MinValue" type="s:float" />
+              <s:element minOccurs="1" maxOccurs="1" name="MaxValue" type="s:float" />
+              <s:element minOccurs="1" maxOccurs="1" name="Precision" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="IntegerAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="MinValue" type="s:int" />
+              <s:element minOccurs="1" maxOccurs="1" name="MaxValue" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:element name="RetrieveEntityMetadata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entityName" type="s:string" />
+            <s:element minOccurs="1" maxOccurs="1" name="flags" type="tns:EntityFlags" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:simpleType name="EntityFlags">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="EntityOnly" />
+              <s:enumeration value="IncludeAttributes" />
+              <s:enumeration value="IncludeRelationships" />
+              <s:enumeration value="IncludePrivileges" />
+              <s:enumeration value="All" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+      <s:element name="RetrieveEntityMetadataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveEntityMetadataResult" type="s1:EntityMetadata" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveAttributeMetadata">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="entityName" type="s:string" />
+            <s:element minOccurs="0" maxOccurs="1" name="attributeName" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="RetrieveAttributeMetadataResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="RetrieveAttributeMetadataResult" type="s1:AttributeMetadata" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+      <s:element name="GetTimestamp">
+        <s:complexType />
+      </s:element>
+      <s:element name="GetTimestampResponse">
+        <s:complexType>
+          <s:sequence>
+            <s:element minOccurs="0" maxOccurs="1" name="GetTimestampResult" type="s:string" />
+          </s:sequence>
+        </s:complexType>
+      </s:element>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://schemas.microsoft.com/crm/2006/Metadata">
+      <s:import namespace="http://microsoft.com/wsdl/types/" />
+      <s:complexType name="Metadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Entities" type="s1:ArrayOfEntityMetadata" />
+          <s:element minOccurs="0" maxOccurs="1" name="Timestamp" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfEntityMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Entity" type="s1:EntityMetadata" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="EntityMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="ObjectTypeCode" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayCollectionName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsCustomEntity" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="IsCustomizable" type="s:boolean" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReportViewName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrimaryField" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="PrimaryKey" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="OwnershipType" type="s1:OwnershipTypes" />
+          <s:element minOccurs="0" maxOccurs="1" name="Attributes" type="s1:ArrayOfAttributeMetadata" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferencesFrom" type="s1:ArrayOfRelationshipMetadata" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferencesTo" type="s1:ArrayOfRelationshipMetadata1" />
+          <s:element minOccurs="0" maxOccurs="1" name="Privileges" type="s1:ArrayOfSecurityPrivilege" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="OwnershipTypes">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="UnOwned" />
+              <s:enumeration value="UserOwned" />
+              <s:enumeration value="BusinessOwned" />
+              <s:enumeration value="OrgOwned" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+      <s:complexType name="ArrayOfAttributeMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Attribute" type="s1:AttributeMetadata" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="AttributeMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="Type" type="s1:AttributeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="DisplayName" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCustomField" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="RequiredLevel" type="s1:AttributeRequiredLevel" />
+          <s:element minOccurs="0" maxOccurs="1" name="DefaultValue" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidForCreate" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidForRead" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="ValidForUpdate" type="s:boolean" />
+          <s:element minOccurs="1" maxOccurs="1" name="DisplayMask" type="s1:DisplayMasks" />
+          <s:element minOccurs="0" maxOccurs="1" name="AttributeOf" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="AttributeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="Boolean" />
+          <s:enumeration value="Customer" />
+          <s:enumeration value="DateTime" />
+          <s:enumeration value="Decimal" />
+          <s:enumeration value="Float" />
+          <s:enumeration value="Integer" />
+          <s:enumeration value="Internal" />
+          <s:enumeration value="Lookup" />
+          <s:enumeration value="Memo" />
+          <s:enumeration value="Money" />
+          <s:enumeration value="Owner" />
+          <s:enumeration value="PartyList" />
+          <s:enumeration value="Picklist" />
+          <s:enumeration value="PrimaryKey" />
+          <s:enumeration value="State" />
+          <s:enumeration value="Status" />
+          <s:enumeration value="String" />
+          <s:enumeration value="UniqueIdentifier" />
+          <s:enumeration value="Virtual" />
+          <s:enumeration value="CalendarRules" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="AttributeRequiredLevel">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="SystemRequired" />
+          <s:enumeration value="Required" />
+          <s:enumeration value="Recommended" />
+          <s:enumeration value="ReadOnly" />
+        </s:restriction>
+      </s:simpleType>
+      <s:simpleType name="DisplayMasks">
+        <s:list>
+          <s:simpleType>
+            <s:restriction base="s:string">
+              <s:enumeration value="None" />
+              <s:enumeration value="PrimaryName" />
+              <s:enumeration value="ObjectTypeCode" />
+              <s:enumeration value="ValidForAdvancedFind" />
+              <s:enumeration value="ValidForForm" />
+              <s:enumeration value="ValidForGrid" />
+              <s:enumeration value="RequiredForForm" />
+              <s:enumeration value="RequiredForGrid" />
+            </s:restriction>
+          </s:simpleType>
+        </s:list>
+      </s:simpleType>
+      <s:complexType name="StateAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="0" maxOccurs="1" name="Options" type="s1:ArrayOfStateOption" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfStateOption">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StateOption" type="s1:StateOption" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StateOption">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:Option">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="DefaultStatus" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="Option">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="OptionValue" type="s:int" />
+          <s:element minOccurs="0" maxOccurs="1" name="Description" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="StatusOption">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:Option">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="State" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="StringAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="MaxLength" type="s:int" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="StatusAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="NextValue" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Options" type="s1:ArrayOfStatusOption" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfStatusOption">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="StatusOption" type="s1:StatusOption" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="PicklistAttributeMetadata">
+        <s:complexContent mixed="false">
+          <s:extension base="s1:AttributeMetadata">
+            <s:sequence>
+              <s:element minOccurs="1" maxOccurs="1" name="NextValue" type="s:int" />
+              <s:element minOccurs="0" maxOccurs="1" name="Options" type="s1:ArrayOfOption" />
+            </s:sequence>
+          </s:extension>
+        </s:complexContent>
+      </s:complexType>
+      <s:complexType name="ArrayOfOption">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Option" type="s1:Option" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRelationshipMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="From" type="s1:RelationshipMetadata" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="RelationshipMetadata">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferencingEntity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferencedEntity" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferencingAttribute" type="s:string" />
+          <s:element minOccurs="0" maxOccurs="1" name="ReferencedAttribute" type="s:string" />
+          <s:element minOccurs="1" maxOccurs="1" name="IsCustomRelationship" type="s:boolean" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfRelationshipMetadata1">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="To" type="s1:RelationshipMetadata" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="ArrayOfSecurityPrivilege">
+        <s:sequence>
+          <s:element minOccurs="0" maxOccurs="unbounded" name="Privilege" type="s1:SecurityPrivilege" />
+        </s:sequence>
+      </s:complexType>
+      <s:complexType name="SecurityPrivilege">
+        <s:sequence>
+          <s:element minOccurs="1" maxOccurs="1" name="PrivilegeId" type="s2:guid" />
+          <s:element minOccurs="1" maxOccurs="1" name="PrivilegeType" type="s1:PrivilegeType" />
+          <s:element minOccurs="0" maxOccurs="1" name="Name" type="s:string" />
+        </s:sequence>
+      </s:complexType>
+      <s:simpleType name="PrivilegeType">
+        <s:restriction base="s:string">
+          <s:enumeration value="None" />
+          <s:enumeration value="Create" />
+          <s:enumeration value="Read" />
+          <s:enumeration value="Write" />
+          <s:enumeration value="Delete" />
+          <s:enumeration value="Assign" />
+          <s:enumeration value="Share" />
+          <s:enumeration value="Append" />
+          <s:enumeration value="AppendTo" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+    <s:schema elementFormDefault="qualified" targetNamespace="http://microsoft.com/wsdl/types/">
+      <s:simpleType name="guid">
+        <s:restriction base="s:string">
+          <s:pattern value="[0-9a-fA-F]{8}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{4}-[0-9a-fA-F]{12}" />
+        </s:restriction>
+      </s:simpleType>
+    </s:schema>
+  </wsdl:types>
+  <wsdl:message name="RetrieveMetadataSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveMetadata" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveMetadataSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveEntityMetadataSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveEntityMetadata" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveEntityMetadataSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveEntityMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveAttributeMetadataSoapIn">
+    <wsdl:part name="parameters" element="tns:RetrieveAttributeMetadata" />
+  </wsdl:message>
+  <wsdl:message name="RetrieveAttributeMetadataSoapOut">
+    <wsdl:part name="parameters" element="tns:RetrieveAttributeMetadataResponse" />
+  </wsdl:message>
+  <wsdl:message name="GetTimestampSoapIn">
+    <wsdl:part name="parameters" element="tns:GetTimestamp" />
+  </wsdl:message>
+  <wsdl:message name="GetTimestampSoapOut">
+    <wsdl:part name="parameters" element="tns:GetTimestampResponse" />
+  </wsdl:message>
+  <wsdl:portType name="MetadataServiceSoap">
+    <wsdl:operation name="RetrieveMetadata">
+      <wsdl:input message="tns:RetrieveMetadataSoapIn" />
+      <wsdl:output message="tns:RetrieveMetadataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveEntityMetadata">
+      <wsdl:input message="tns:RetrieveEntityMetadataSoapIn" />
+      <wsdl:output message="tns:RetrieveEntityMetadataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAttributeMetadata">
+      <wsdl:input message="tns:RetrieveAttributeMetadataSoapIn" />
+      <wsdl:output message="tns:RetrieveAttributeMetadataSoapOut" />
+    </wsdl:operation>
+    <wsdl:operation name="GetTimestamp">
+      <wsdl:input message="tns:GetTimestampSoapIn" />
+      <wsdl:output message="tns:GetTimestampSoapOut" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="MetadataServiceSoap" type="tns:MetadataServiceSoap">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetrieveMetadata">
+      <soap:operation soapAction="http://schemas.microsoft.com/crm/2006/WebServices/RetrieveMetadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveEntityMetadata">
+      <soap:operation soapAction="http://schemas.microsoft.com/crm/2006/WebServices/RetrieveEntityMetadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAttributeMetadata">
+      <soap:operation soapAction="http://schemas.microsoft.com/crm/2006/WebServices/RetrieveAttributeMetadata" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTimestamp">
+      <soap:operation soapAction="http://schemas.microsoft.com/crm/2006/WebServices/GetTimestamp" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:binding name="MetadataServiceSoap12" type="tns:MetadataServiceSoap">
+    <soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="RetrieveMetadata">
+      <soap12:operation soapAction="http://schemas.microsoft.com/crm/2006/WebServices/RetrieveMetadata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveEntityMetadata">
+      <soap12:operation soapAction="http://schemas.microsoft.com/crm/2006/WebServices/RetrieveEntityMetadata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="RetrieveAttributeMetadata">
+      <soap12:operation soapAction="http://schemas.microsoft.com/crm/2006/WebServices/RetrieveAttributeMetadata" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GetTimestamp">
+      <soap12:operation soapAction="http://schemas.microsoft.com/crm/2006/WebServices/GetTimestamp" style="document" />
+      <wsdl:input>
+        <soap12:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap12:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="MetadataService">
+    <wsdl:port name="MetadataServiceSoap" binding="tns:MetadataServiceSoap">
+      <soap:address location="http://crm:5555/mscrmservices/2006/metadataservice.asmx" />
+    </wsdl:port>
+    <wsdl:port name="MetadataServiceSoap12" binding="tns:MetadataServiceSoap12">
+      <soap12:address location="http://crm:5555/mscrmservices/2006/metadataservice.asmx" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

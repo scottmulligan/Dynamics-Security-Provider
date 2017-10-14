@@ -1,0 +1,14 @@
+<?xml version="1.0"?>
+<project name="CRM.Security.Provider" xmlns="http://schemas.sitecore.net/nant/buildscript">
+
+  <target name="deploy.cms.package"> 
+    <property name="cms.package.name" value="${product.name} ${project.version}.zip"/>
+	<property name="cms.upgrade_package.name" value="${product.name} Upgrade ${project.version}.zip"/>
+	
+    <copy file="${tweak.site.root}/${cms.package.name}" todir="${deploy.folder}" overwrite="true"/>
+    <copy file="${tweak.site.root}/${cms.upgrade_package.name}" todir="${deploy.folder}" overwrite="true"/>
+  </target>
+  
+</project>
+
+

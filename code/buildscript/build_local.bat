@@ -1,0 +1,1 @@
+nant autobuild -D:bf.root=D:\BFResources\bf -D:sql2005.connection.pattern="data source=.;integrated security=true" -D:sql2005.server=. -D:sql2008.server=. -D:sls.root=D:\BFResources\sls -D:translation.root=\\bf0dk1\Resources\i18n

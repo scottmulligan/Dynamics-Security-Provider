@@ -1,0 +1,1 @@
+nant autobuild -l:log.txt 

@@ -1,0 +1,58 @@
+----item----
+version: 1
+id: {DDEDA46F-169B-4A70-8732-DBD3F407AF2E}
+database: core
+path: /sitecore/system/Settings/Security/Profiles/CrmContact
+parent: {65701CE7-6FFC-4A76-88F0-05834AFD7E9D}
+name: CrmContact
+master: {00000000-0000-0000-0000-000000000000}
+template: {983AE684-17F8-43FB-8BAF-76B9D5617CB0}
+templatekey: CrmContact
+
+----version----
+language: en
+version: 1
+revision: 4b153164-a579-4bef-8a22-274aaa57f731
+
+----field----
+field: {25BED78C-4957-4165-998A-CA1B52F67497}
+name: __Created
+key: __created
+content-length: 15
+
+20080731T145443
+----field----
+field: {5DD74568-4D4B-44C1-B513-0AF5F4CDA34F}
+name: __Created by
+key: __created by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {8CDC337E-A112-42FB-BBB4-4143751E123F}
+name: __Revision
+key: __revision
+content-length: 36
+
+4b153164-a579-4bef-8a22-274aaa57f731
+----field----
+field: {D9CF14B1-FA16-4BA6-9288-E8A174D4D522}
+name: __Updated
+key: __updated
+content-length: 34
+
+20081106T165250:633615871704531250
+----field----
+field: {BADD9CF9-53E0-4D0C-BCC0-2D784C282F6A}
+name: __Updated by
+key: __updated by
+content-length: 14
+
+sitecore\admin
+----field----
+field: {001DD393-96C5-490B-924A-B0F25CD9EFD8}
+name: __Lock
+key: __lock
+content-length: 5
+
+<r />

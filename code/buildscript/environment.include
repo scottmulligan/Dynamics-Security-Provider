@@ -1,0 +1,30 @@
+<?xml version="1.0"?>
+<project name="CRM.Security.Provider" xmlns="http://schemas.sitecore.net/nant/buildscript">
+  <!-- SQL Server Setup -->
+  <property name="bf.dmw.databasePrefix" value="CRMSecurityProviderBuildScript" />
+  <property name="sql2005.server" value="."/>
+  <property name="sql2005.security" value="integrated security=true"/>
+  <property name="sql2005.sqlcmd" value="-S ${sql2005.server} -E" dynamic="true"/>
+  <property name="sql2005.connection.pattern" value="data source=${sql2005.server};${sql2005.security}" dynamic="true"/>
+
+  <property name="self.path" value="${path::get-full-path('.')}"/>
+  <property name="root.path" value="${directory::get-parent-directory(self.path)}" unless="${property::exists('root.path')}"/>
+  <property name="bf.root" value="\\BF1UA1\BF"/>
+  <property name="bf.resources" value="${bf.root}\Resources"/>
+  <property name="code.path" value="${root.path}"/>
+  <property name="license.file" value="${code.path}\data\license.xml" />
+  <property name="webdev.webserver.exe" value="c:\Program Files (x86)\Common Files\microsoft shared\DevServer\11.0\WebDev.WebServer40.EXE" readonly="true"/>
+
+  <property name="crmsdk.version" value="v7"/>
+  <property name="fw.version" value="4.5.2"/>
+  <property name="webproject.path" value="${code.path}"/>
+  <property name="packages.path" value="${webproject.path}\data\packages"/>
+  <property name="crmsdk.path" value="${webproject.path}\data\crmsdk\${crmsdk.version}"/>
+  <property name="msbuild.exe" value="C:\Windows\Microsoft.NET\Framework\v4.0.30319\MSBuild.exe"/>
+  <property name="deploy.folder" value="${root.path}\output"/>
+  
+  <property name="Configuration" value="Release" overwrite="false" />
+
+  <!-- It is taken from https://svn1ua1.dk.sitecore.net/svn/i18n SVN. -->
+  <property name="paths.translations.root" value="..\i18n"/>
+</project>

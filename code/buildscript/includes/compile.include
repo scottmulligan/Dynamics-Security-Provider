@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<project name="CRM.Security.Provider" xmlns="http://schemas.sitecore.net/nant/buildscript">
+  <target name="compile.solution"> 
+    <exec program="${msbuild.exe}" commandline='"${code.path}/CRMSecurityProvider.sln" /t:Build /p:Configuration=${Configuration} /p:TargetFrameworkVersion=v${fw.version}'/>
+  </target>
+</project>
+
+
