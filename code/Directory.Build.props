@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project> 
+    <PropertyGroup>
+        <Product>Microsoft Dynamics CRM Security Provider 2.3.2 rev. $([System.DateTime]::Now.ToString('yy'))$([System.DateTime]::Now.ToString('MM'))$([System.DateTime]::Now.ToString('dd'))</Product>
+        <Title>Microsoft Dynamics CRM Security Provider</Title>
+        <PackageProjectUrl>https://github.com/Sitecore/Dynamics-Security-Provider</PackageProjectUrl>
+        <PackageLicenseUrl>https://github.com/Sitecore/Dynamics-Security-Provider/blob/master/LICENSE.md</PackageLicenseUrl>
+        <PackageIconUrl>https://mygetwwwsitecoreeu.blob.core.windows.net/feedicons/sc-packages.png</PackageIconUrl>
+        <Description></Description>
+        <Company>Sitecore Corporation A/S</Company>
+        <Authors>Sitecore Corporation A/S</Authors>
+        <Copyright>&#169; $([System.DateTime]::Now.ToString('yyyy')) Sitecore Corporation A/S. All rights reserved. Sitecore&#174; is a registered trademark of Sitecore Corporation A/S.</Copyright>
+        <Version>2.3.$([System.DateTime]::Now.ToString('yy'))$([System.DateTime]::Now.ToString('MM'))$([System.DateTime]::Now.ToString('dd'))</Version>
+        <PackageVersion>2.3.$([System.DateTime]::Now.ToString('yy'))$([System.DateTime]::Now.ToString('MM'))$([System.DateTime]::Now.ToString('dd'))</PackageVersion>
+        <AssemblyVersion>2.3.0.0</AssemblyVersion>
+        <FileVersion>2.3.2.0</FileVersion>
+        <InformationalVersion>2.3.2 rev. $([System.DateTime]::Now.ToString('yy'))$([System.DateTime]::Now.ToString('MM'))$([System.DateTime]::Now.ToString('dd'))</InformationalVersion>
+    </PropertyGroup>
+</Project>
