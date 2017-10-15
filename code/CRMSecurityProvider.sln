@@ -1,17 +1,11 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 14
-VisualStudioVersion = 14.0.24720.0
+# Visual Studio 15
+VisualStudioVersion = 15.0.27004.2002
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMSecurityProvider", "CRMSecurityProvider.csproj", "{8B2A002B-DF1A-47A0-9C60-08D06EB0AA58}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMSecurityProvider", "CRMSecurityProvider\CRMSecurityProvider.csproj", "{8B2A002B-DF1A-47A0-9C60-08D06EB0AA58}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMSecurityProvider.Test", "CRMSecurityProvider.Test\CRMSecurityProvider.Test.csproj", "{5120B172-CCAE-4586-8ACA-7FB42A456B2B}"
-EndProject
-Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Solution Items", "Solution Items", "{D0BC61D6-997D-4417-B551-2B8BD9C7CD60}"
-	ProjectSection(SolutionItems) = preProject
-		Performance1.psess = Performance1.psess
-		Performance2.psess = Performance2.psess
-	EndProjectSection
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -33,5 +27,6 @@ Global
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
+		SolutionGuid = {E4F2CF71-FA39-4299-BEE9-D692AEA44FF7}
 	EndGlobalSection
 EndGlobal
