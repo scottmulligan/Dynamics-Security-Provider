@@ -1,7 +1,7 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio 15
-VisualStudioVersion = 15.0.27004.2002
+# Visual Studio 14
+VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CRMSecurityProvider", "CRMSecurityProvider\CRMSecurityProvider.csproj", "{8B2A002B-DF1A-47A0-9C60-08D06EB0AA58}"
 EndProject
@@ -13,20 +13,18 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{8B2A002B-DF1A-47A0-9C60-08D06EB0AA58}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{8B2A002B-DF1A-47A0-9C60-08D06EB0AA58}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{8B2A002B-DF1A-47A0-9C60-08D06EB0AA58}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{8B2A002B-DF1A-47A0-9C60-08D06EB0AA58}.Release|Any CPU.Build.0 = Release|Any CPU
-		{5120B172-CCAE-4586-8ACA-7FB42A456B2B}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{5120B172-CCAE-4586-8ACA-7FB42A456B2B}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{5120B172-CCAE-4586-8ACA-7FB42A456B2B}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{5120B172-CCAE-4586-8ACA-7FB42A456B2B}.Release|Any CPU.Build.0 = Release|Any CPU
+		{8B2A002B-DF1A-47A0-9C60-08D06EB0AA58}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{8B2A002B-DF1A-47A0-9C60-08D06EB0AA58}.Release|Any CPU.ActiveCfg = Debug|x86
+		{8B2A002B-DF1A-47A0-9C60-08D06EB0AA58}.Release|Any CPU.Build.0 = Debug|x86
+		{5120B172-CCAE-4586-8ACA-7FB42A456B2B}.Debug|Any CPU.ActiveCfg = Debug|x86
+		{5120B172-CCAE-4586-8ACA-7FB42A456B2B}.Release|Any CPU.ActiveCfg = Debug|x86
+		{5120B172-CCAE-4586-8ACA-7FB42A456B2B}.Release|Any CPU.Build.0 = Debug|x86
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
-		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
 		SolutionGuid = {E4F2CF71-FA39-4299-BEE9-D692AEA44FF7}
+		EnterpriseLibraryConfigurationToolBinariesPath = packages\Unity.2.1.505.2\lib\NET35
 	EndGlobalSection
 EndGlobal

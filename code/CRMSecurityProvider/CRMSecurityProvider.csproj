@@ -1,15 +1,62 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project Sdk="Microsoft.NET.Sdk" xmlns="http://schemas.microsoft.com/developer/msbuild/2003" ToolsVersion="14.0">
   <PropertyGroup>
     <TargetFramework>net452</TargetFramework>
     <AssemblyName>CRMSecurityProvider</AssemblyName>
+    <FileUpgradeFlags>
+    </FileUpgradeFlags>
+    <UpgradeBackupLocation>
+    </UpgradeBackupLocation>
+    <OldToolsVersion>2.0</OldToolsVersion>
+    <ProjectGuid>{8B2A002B-DF1A-47A0-9C60-08D06EB0AA58}</ProjectGuid>
+    <PublishUrl>publish\</PublishUrl>
+    <Install>true</Install>
+    <InstallFrom>Disk</InstallFrom>
+    <UpdateEnabled>false</UpdateEnabled>
+    <UpdateMode>Foreground</UpdateMode>
+    <UpdateInterval>7</UpdateInterval>
+    <UpdateIntervalUnits>Days</UpdateIntervalUnits>
+    <UpdatePeriodically>false</UpdatePeriodically>
+    <UpdateRequired>false</UpdateRequired>
+    <MapFileExtensions>true</MapFileExtensions>
+    <ApplicationRevision>0</ApplicationRevision>
+    <ApplicationVersion>1.0.0.%2a</ApplicationVersion>
+    <IsWebBootstrapper>false</IsWebBootstrapper>
+    <UseApplicationTrust>false</UseApplicationTrust>
+    <BootstrapperEnabled>true</BootstrapperEnabled>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)' == 'Debug|x86'">
+    <CodeAnalysisRuleSet>MinimumRecommendedRules.ruleset</CodeAnalysisRuleSet>
   </PropertyGroup>
   <ItemGroup>
     <None Include="App.config" />
+    <None Include="App_Config\Include\crm.config" />
+    <None Include="Web References\crm3.metadataservice\AttributeMetadata.datasource" />
+    <None Include="Web References\crm3.metadataservice\EntityMetadata.datasource" />
+    <None Include="Web References\crm3.metadataservice\Metadata.datasource" />
+    <None Include="Web References\crm3.metadataservice\metadataservice.wsdl" />
+    <None Include="Web References\crm3.metadataservice\Reference.map" />
+    <None Include="Web References\crm3.webservice\BusinessEntity.datasource" />
+    <None Include="Web References\crm3.webservice\BusinessEntityCollection.datasource" />
+    <None Include="Web References\crm3.webservice\crmservice.wsdl" />
+    <None Include="Web References\crm3.webservice\Reference.map" />
+    <None Include="Web References\crm3.webservice\Response.datasource" />
+    <None Include="Web References\crm4.discoveryservice\CrmDiscoveryService.wsdl" />
+    <None Include="Web References\crm4.discoveryservice\Reference.map" />
+    <None Include="Web References\crm4.discoveryservice\Response.datasource" />
+    <None Include="Web References\crm4.metadataservice\metadataservice.wsdl" />
+    <None Include="Web References\crm4.metadataservice\MetadataServiceResponse.datasource" />
+    <None Include="Web References\crm4.metadataservice\Reference.map" />
+    <None Include="Web References\crm4.webservice\BusinessEntity.datasource" />
+    <None Include="Web References\crm4.webservice\BusinessEntityCollection.datasource" />
+    <None Include="Web References\crm4.webservice\CrmServiceWsdl.wsdl" />
+    <None Include="Web References\crm4.webservice\Reference.map" />
+    <None Include="Web References\crm4.webservice\Response.datasource" />
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies" Version="7.0.1" />
-    <PackageReference Include="Sitecore.Kernel" Version="8.2.170728" />
-    <PackageReference Include="Unity" Version="2.1.505.2" />
+    <PackageReference Include="Microsoft.CrmSdk.CoreAssemblies" />
+    <PackageReference Include="Sitecore.Kernel" />
+    <PackageReference Include="Unity" />
   </ItemGroup>
   <ItemGroup Condition=" '$(TargetFramework)' == 'net452' ">
     <Reference Include="System" />
@@ -27,5 +74,227 @@
     <Reference Include="System.Web.Services" />
     <Reference Include="System.XML" />
     <Reference Include="System.Xml.Linq" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="sitecore\admin\CRMProviderProfiler.aspx" />
+    <Content Include="Web References\crm3.metadataservice\metadataservice.disco" />
+    <Content Include="Web References\crm3.webservice\crmservice.disco" />
+    <Content Include="Web References\crm4.discoveryservice\CrmDiscoveryService.disco" />
+    <Content Include="Web References\crm4.metadataservice\metadataservice.disco" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="sitecore\admin\CRMProviderProfiler.aspx.cs">
+      <DependentUpon>CRMProviderProfiler.aspx</DependentUpon>
+    </Compile>
+    <Compile Include="sitecore\admin\CRMProviderProfiler.aspx.designer.cs">
+      <DependentUpon>CRMProviderProfiler.aspx.cs</DependentUpon>
+    </Compile>
+    <Compile Include="sources\AdapterBase.cs" />
+    <Compile Include="sources\AdapterFactoryBase.cs" />
+    <Compile Include="sources\AnonymousUser.cs" />
+    <Compile Include="sources\Attribute\CrmAttributeAdapterBase.cs" />
+    <Compile Include="sources\Attribute\CrmAttributeRequiredLevel.cs" />
+    <Compile Include="sources\Attribute\CrmAttributeType.cs" />
+    <Compile Include="sources\Attribute\ICrmAttribute.cs" />
+    <Compile Include="sources\Attribute\ICrmAttributeCollection.cs" />
+    <Compile Include="sources\Attribute\ICrmBoolAttribute.cs" />
+    <Compile Include="sources\Attribute\ICrmDateTimeAttribute.cs" />
+    <Compile Include="sources\Attribute\ICrmDecimalAttribute.cs" />
+    <Compile Include="sources\Attribute\ICrmDoubleAttribute.cs" />
+    <Compile Include="sources\Attribute\ICrmGuidAttribute.cs" />
+    <Compile Include="sources\Attribute\ICrmIntegerAttribute.cs" />
+    <Compile Include="sources\Attribute\ICrmKeyValueAttribute.cs" />
+    <Compile Include="sources\Attribute\ICrmLongAttribute.cs" />
+    <Compile Include="sources\Attribute\ICrmReferenceAttribute.cs" />
+    <Compile Include="sources\Attribute\ICrmStringAttribute.cs" />
+    <Compile Include="sources\Attribute\Metadata\CrmAttributeMetadataAdapterBase.cs" />
+    <Compile Include="sources\Attribute\Metadata\ICrmAttributeMetadata.cs" />
+    <Compile Include="sources\Attribute\Metadata\ICrmLookupAttributeMetadata.cs" />
+    <Compile Include="sources\Attribute\Metadata\ICrmOptionsAttributeMetadata.cs" />
+    <Compile Include="sources\Attribute\Metadata\ICrmPicklistAttributeMetadata.cs" />
+    <Compile Include="sources\Attribute\Metadata\ICrmStateAttributeMetadata.cs" />
+    <Compile Include="sources\Attribute\Metadata\ICrmStatusAttributeMetadata.cs" />
+    <Compile Include="sources\Caching\CacheService.cs" />
+    <Compile Include="sources\Caching\CrmCache.cs" />
+    <Compile Include="sources\Caching\ICacheService.cs" />
+    <Compile Include="sources\Caching\ICrmCacheable.cs" />
+    <Compile Include="sources\Caching\StringCache.cs" />
+    <Compile Include="sources\Configuration\ApiVersion.cs" />
+    <Compile Include="sources\Configuration\AuthenticationType.cs" />
+    <Compile Include="sources\Configuration\ConfigKey.cs" />
+    <Compile Include="sources\Configuration\ConfigurationSettings.cs" />
+    <Compile Include="sources\Configuration\EnumerableConstants.cs" />
+    <Compile Include="sources\Configuration\Settings.cs" />
+    <Compile Include="sources\Entity\CrmEntityAdapterBase.cs" />
+    <Compile Include="sources\Entity\CrmEntityMetadata.cs" />
+    <Compile Include="sources\Entity\EmptyCrmEntityMetadata.cs" />
+    <Compile Include="sources\Entity\ICrmEntity.cs" />
+    <Compile Include="sources\Membership\CRMAnonymousMembershipProvider.cs" />
+    <Compile Include="sources\Membership\CRMMembershipProvider.cs" />
+    <Compile Include="sources\Membership\CRMMembershipProviderPerformanceWrapper.cs" />
+    <Compile Include="sources\Membership\CRMMembershipUser.cs" />
+    <Compile Include="sources\Membership\CRMUser.cs" />
+    <Compile Include="sources\ModuleProfiler\CrmProfiler.cs" />
+    <Compile Include="sources\ModuleProfiler\CrmProfilerCounter.cs" />
+    <Compile Include="sources\ModuleProfiler\CrmProfilerExtension.cs" />
+    <Compile Include="sources\ModuleProfiler\CrmProfilerExtensionAttribute.cs" />
+    <Compile Include="sources\PagingInfo\CrmOrderExpression.cs" />
+    <Compile Include="sources\PagingInfo\CrmPagingInfo.cs" />
+    <Compile Include="sources\Profile\ContactAttribute.cs" />
+    <Compile Include="sources\Profile\CRMAnonymousProfileProvider.cs" />
+    <Compile Include="sources\Profile\CRMProfileProvider.cs" />
+    <Compile Include="sources\Profile\CRMProfileProviderPerformanceWrapper.cs" />
+    <Compile Include="sources\Profile\PicklistContactAttribute.cs" />
+    <Compile Include="sources\Profile\SupportedTypes.cs" />
+    <Compile Include="sources\Repository\EntityRepositoryBase.cs" />
+    <Compile Include="sources\Repository\Factory\EntityRepositoryFactory.cs" />
+    <Compile Include="sources\Repository\Factory\IEntityRepositoryFactory.cs" />
+    <Compile Include="sources\Repository\Factory\IProfileRepositoryFactory.cs" />
+    <Compile Include="sources\Repository\Factory\IRoleRepositoryFactory.cs" />
+    <Compile Include="sources\Repository\Factory\IUserRepositoryFactory.cs" />
+    <Compile Include="sources\Repository\Factory\ProfileRepositoryFactory.cs" />
+    <Compile Include="sources\Repository\Factory\RepositoryFactory.cs" />
+    <Compile Include="sources\Repository\Factory\RoleRepositoryFactory.cs" />
+    <Compile Include="sources\Repository\Factory\UserRepositoryFactory.cs" />
+    <Compile Include="sources\Repository\ProfileRepositoryBase.cs" />
+    <Compile Include="sources\Repository\RepositoryBase.cs" />
+    <Compile Include="sources\Repository\RoleRepositoryBase.cs" />
+    <Compile Include="sources\Repository\UserRepositoryBase.cs" />
+    <Compile Include="sources\Repository\V3\Attribute\CrmAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V3\Attribute\CrmAttributeCollectionAdapter.cs" />
+    <Compile Include="sources\Repository\V3\Attribute\Metadata\CrmAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V3\Attribute\Metadata\CrmAttributeMetadataFactory.cs" />
+    <Compile Include="sources\Repository\V3\Attribute\Metadata\CrmLookupAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V3\Attribute\Metadata\CrmPicklistAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V3\Attribute\Metadata\CrmStateAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V3\Attribute\Metadata\CrmStatusAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V3\ContactToUserConverterV3.cs" />
+    <Compile Include="sources\Repository\V3\CrmService.cs" />
+    <Compile Include="sources\Repository\V3\CrmServiceCreatorV3.cs" />
+    <Compile Include="sources\Repository\V3\EntityRepository.cs" />
+    <Compile Include="sources\Repository\V3\Entity\CrmEntityAdapter.cs" />
+    <Compile Include="sources\Repository\V3\Entity\CrmEntityMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V3\Extensions\ConditionExpressionExtensions.cs" />
+    <Compile Include="sources\Repository\V3\Extensions\DynamicEntityExtensions.cs" />
+    <Compile Include="sources\Repository\V3\Extensions\FilterExpressionExtensions.cs" />
+    <Compile Include="sources\Repository\V3\Extensions\MarketingListExtensionsV3.cs" />
+    <Compile Include="sources\Repository\V3\IContactToUserConverterV3.cs" />
+    <Compile Include="sources\Repository\V3\ICrmServiceV3.cs" />
+    <Compile Include="sources\Repository\V3\IMarketingListToRoleConverterV3.cs" />
+    <Compile Include="sources\Repository\V3\IMetadataServiceV3.cs" />
+    <Compile Include="sources\Repository\V3\ListEqualityComparer.cs" />
+    <Compile Include="sources\Repository\V3\MarketingListToRoleConverterV3.cs" />
+    <Compile Include="sources\Repository\V3\MetadataService.cs" />
+    <Compile Include="sources\Repository\V3\ProfileRepositoryV3.cs" />
+    <Compile Include="sources\Repository\V3\PropertyToValueConverterV3.cs" />
+    <Compile Include="sources\Repository\V3\RoleRepositoryV3.cs" />
+    <Compile Include="sources\Repository\V3\UserRepositoryV3.cs" />
+    <Compile Include="sources\Repository\V4\Attribute\CrmAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V4\Attribute\CrmAttributeAdapterFactory.cs" />
+    <Compile Include="sources\Repository\V4\Attribute\CrmAttributeCollectionAdapter.cs" />
+    <Compile Include="sources\Repository\V4\Attribute\CrmPropertyAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V4\Attribute\CrmStateAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V4\Attribute\CrmStatusAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V4\Attribute\Metadata\CrmAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V4\Attribute\Metadata\CrmAttributeMetadataFactory.cs" />
+    <Compile Include="sources\Repository\V4\Attribute\Metadata\CrmLookupAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V4\Attribute\Metadata\CrmPicklistAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V4\Attribute\Metadata\CrmStateAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V4\Attribute\Metadata\CrmStatusAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V4\ContactToUserConverterV4.cs" />
+    <Compile Include="sources\Repository\V4\CrmServiceCreatorV4.cs" />
+    <Compile Include="sources\Repository\V4\EntityRepository.cs" />
+    <Compile Include="sources\Repository\V4\Entity\CrmEntityAdapter.cs" />
+    <Compile Include="sources\Repository\V4\Entity\CrmEntityMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V4\Extensions\ConditionExpressionExtensions.cs" />
+    <Compile Include="sources\Repository\V4\Extensions\DynamicEntityExtensions.cs" />
+    <Compile Include="sources\Repository\V4\Extensions\FilterExpressionExtensions.cs" />
+    <Compile Include="sources\Repository\V4\Extensions\MarketingListExtensionsV4.cs" />
+    <Compile Include="sources\Repository\V4\IContactToUserConverterV4.cs" />
+    <Compile Include="sources\Repository\V4\ICrmServiceV4.cs" />
+    <Compile Include="sources\Repository\V4\IMarketingListToRoleConverterV4.cs" />
+    <Compile Include="sources\Repository\V4\IMetadataServiceV4.cs" />
+    <Compile Include="sources\Repository\V4\ListEqualityComparer.cs" />
+    <Compile Include="sources\Repository\V4\LiveIdTicketManager.cs" />
+    <Compile Include="sources\Repository\V4\ManagedTokenCrmService.cs" />
+    <Compile Include="sources\Repository\V4\ManagedTokenMetadataService.cs" />
+    <Compile Include="sources\Repository\V4\ManagedTokenService.cs" />
+    <Compile Include="sources\Repository\V4\MarketingListToRoleConverterV4.cs" />
+    <Compile Include="sources\Repository\V4\ProfileRepositoryV4.cs" />
+    <Compile Include="sources\Repository\V4\PropertyToValueConverterV4.cs" />
+    <Compile Include="sources\Repository\V4\RoleRepositoryV4.cs" />
+    <Compile Include="sources\Repository\V4\UserRepositoryV4.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmAttributeAdapterFactory.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmAttributeCollectionAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmBoolAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmDateTimeAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmDecimalAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmDoubleAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmEntityReferenceAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmGuidAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmIntegerAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmLongAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmNamingAttributeAdapterFactory.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmObjectAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmOptionSetValueAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmStringAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\CrmValueTypeAttributeAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\Metadata\CrmAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\Metadata\CrmAttributeMetadataFactory.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\Metadata\CrmLookupAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\Metadata\CrmOptionsAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\Metadata\CrmPicklistAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\Metadata\CrmStateAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Attribute\Metadata\CrmStatusAttributeMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V5\ContactToUserConverterV5.cs" />
+    <Compile Include="sources\Repository\V5\CrmServiceCreatorV5.cs" />
+    <Compile Include="sources\Repository\V5\EntityEqualityComparer.cs" />
+    <Compile Include="sources\Repository\V5\EntityRepository.cs" />
+    <Compile Include="sources\Repository\V5\Entity\CrmEntityAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Entity\CrmEntityMetadataAdapter.cs" />
+    <Compile Include="sources\Repository\V5\Extensions\ConditionExpressionExtensions.cs" />
+    <Compile Include="sources\Repository\V5\Extensions\FilterExpressionExtensions.cs" />
+    <Compile Include="sources\Repository\V5\IContactToUserConverterV5.cs" />
+    <Compile Include="sources\Repository\V5\IMarketingListToRoleConverterV5.cs" />
+    <Compile Include="sources\Repository\V5\ManagedTokenOrganizationServiceProxy.cs" />
+    <Compile Include="sources\Repository\V5\MarketingListToRoleConverterV5.cs" />
+    <Compile Include="sources\Repository\V5\OrganizationServiceCacheV5.cs" />
+    <Compile Include="sources\Repository\V5\ProfileRepositoryV5.cs" />
+    <Compile Include="sources\Repository\V5\RoleRepositoryV5.cs" />
+    <Compile Include="sources\Repository\V5\UserRepositoryV5.cs" />
+    <Compile Include="sources\Role\CRMAnonymousRoleProvider.cs" />
+    <Compile Include="sources\Role\CRMRole.cs" />
+    <Compile Include="sources\Role\CRMRoleProvider.cs" />
+    <Compile Include="sources\Role\CRMRoleProviderPerformanceWrapper.cs" />
+    <Compile Include="sources\Utils\ConditionalLog.cs" />
+    <Compile Include="sources\Utils\CrmHelper.cs" />
+    <Compile Include="sources\Utils\CrmStopwatch.cs" />
+    <Compile Include="sources\Utils\Extensions\CrmExtensions.cs" />
+    <Compile Include="sources\Utils\Extensions\StringExtensions.cs" />
+    <Compile Include="sources\Utils\LoggingLevel.cs" />
+    <Compile Include="sources\Utils\TimerAction.cs" />
+    <Compile Include="Web References\crm3.metadataservice\Reference.cs" />
+    <Compile Include="Web References\crm3.webservice\Reference.cs" />
+    <Compile Include="Web References\crm4.discoveryservice\Reference.cs" />
+    <Compile Include="Web References\crm4.metadataservice\Reference.cs" />
+    <Compile Include="Web References\crm4.webservice\Reference.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <BootstrapperPackage Include=".NETFramework,Version=v4.0">
+      <Visible>False</Visible>
+      <ProductName>Microsoft .NET Framework 4 %28x86 and x64%29</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Net.Framework.3.5.SP1">
+      <Visible>False</Visible>
+      <ProductName>.NET Framework 3.5 SP1</ProductName>
+      <Install>false</Install>
+    </BootstrapperPackage>
+    <BootstrapperPackage Include="Microsoft.Windows.Installer.4.5">
+      <Visible>False</Visible>
+      <ProductName>Windows Installer 4.5</ProductName>
+      <Install>true</Install>
+    </BootstrapperPackage>
   </ItemGroup>
 </Project>
